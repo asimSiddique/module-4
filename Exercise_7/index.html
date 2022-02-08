@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--The following line create an input box where text can be enter and will 
+        hold "Enter your name" while empty or until user enter something in it. --> 
+    <input id="name-input" type="text" placeholder="Enter your name" />
+    <!--The following line create a button with id my-button that display Click Me on it-->
+    <button id="my-button">Click Me</button>
+
+    <!--The start of javaScript through script tag-->
+<script>
+    //The followig line create a variable my button and assign the value of class my button to it
+    //which is located by parsing the html document through query selector. 
+    var myButton = document.querySelector('#my-button');
+    //Following line create variable named myInput and assign the value of class name-input to it.
+    var nameInput = document.querySelector('#name-input');
+
+    //The following line create an even listener for the button and activate everytime
+    //the button is pressed and then pass action and function to it. 
+    //It run conditional and check if the input value was empty or not, if
+    // it was not empty then it would display and alert with Hello concated with 
+    //whatever the input value is. 
+    myButton.addEventListener('click', function () {
+        if (nameInput.value !== '') {
+        alert('Hello ' + nameInput.value);
+    }
+});
+</script>
+</body>
+</html>
